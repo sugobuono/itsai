@@ -1,5 +1,5 @@
 # itsai
 
-## Informazioni di base
+## Informazioni di base del progetto
 
 Questo è il mio primo progetto gestito con Github. 
