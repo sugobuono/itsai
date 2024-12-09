@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="maggioriminori"/>
+        <attribute name="authors" value="lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-21 05:04:15 "/>
+        <attribute name="created" value="bGVub3ZvO1JJQ0hJUEM7MjAyNC0xMS0yMTsiMDQ6MjI6MjggIjsyMzU5"/>
+        <attribute name="edited" value="bGVub3ZvO1JJQ0hJUEM7MjAyNC0xMS0yMTsiMDU6MDQ6MTUgIjsxOzI0NjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="contatore1" type="Integer" array="False" size=""/>
+            <assign variable="contatore1" expression="0"/>
+            <declare name="contatore2" type="Integer" array="False" size=""/>
+            <assign variable="contatore2" expression="0"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="l" type="Integer" array="False" size=""/>
+            <assign variable="l" expression="0"/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <assign variable="j" expression="0"/>
+            <declare name="lunghezza" type="Integer" array="False" size=""/>
+            <declare name="k" type="Integer" array="False" size=""/>
+            <output expression="&quot;quanto &#232; lunga la lista?&quot;" newline="True"/>
+            <input variable="lunghezza"/>
+            <declare name="lista" type="Integer" array="True" size="lunghezza"/>
+            <output expression="&quot;inserire i numeri della lista&quot;" newline="True"/>
+            <for variable="i" start="0" end="lunghezza-1" direction="inc" step="1">
+                <input variable="lista[i]"/>
+            </for>
+            <output expression="&quot;inserire il numero k&quot;" newline="True"/>
+            <input variable="k"/>
+            <for variable="i" start="0" end="lunghezza-1" direction="inc" step="1">
+                <if expression="k&lt;lista[i]">
+                    <then>
+                        <assign variable="j" expression="j+1"/>
+                    </then>
+                    <else>
+                        <assign variable="l" expression="l+1"/>
+                    </else>
+                </if>
+            </for>
+            <declare name="maggiori" type="Integer" array="True" size="j"/>
+            <declare name="minori" type="Integer" array="True" size="l"/>
+            <for variable="i" start="0" end="lunghezza-1" direction="inc" step="1">
+                <if expression="k&lt;lista[i]">
+                    <then>
+                        <assign variable="maggiori[contatore1]" expression="lista[i]"/>
+                        <assign variable="contatore1" expression="contatore1+1"/>
+                    </then>
+                    <else>
+                        <assign variable="minori[contatore2]" expression="lista[i]"/>
+                        <assign variable="contatore2" expression="contatore2+1"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;i numeri maggiori di k sono: &quot;" newline="True"/>
+            <for variable="contatore1" start="0" end="j-1" direction="inc" step="1">
+                <output expression="maggiori[contatore1]" newline="True"/>
+            </for>
+            <output expression="&quot;i numeri minori di k sono: &quot;" newline="True"/>
+            <for variable="contatore2" start="0" end="l-1" direction="inc" step="1">
+                <output expression="minori[contatore2]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
