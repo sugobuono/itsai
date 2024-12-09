@@ -17,7 +17,7 @@
             <assign variable="contatore2" expression="0"/>
             <declare name="i" type="Integer" array="False" size=""/>
             <declare name="l" type="Integer" array="False" size=""/>
-            <assign variable="l" expression="0"/>
+            <assign variable="2" expression="0"/>
             <declare name="j" type="Integer" array="False" size=""/>
             <assign variable="j" expression="0"/>
             <declare name="lunghezza" type="Integer" array="False" size=""/>
